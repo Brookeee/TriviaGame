@@ -1,0 +1,13 @@
+body {
+    background-image: url("../images/music.jpg");
+    /* opacity: 20%; */
+}
+h1 {
+    font-size: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: 150px;
+}
+#startbtn {
+    font-family: 'Courier New', Courier, monospace;
+}
