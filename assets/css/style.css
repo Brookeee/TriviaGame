@@ -1,12 +1,12 @@
 body {
-    background-image: url("../images/music.jpg");
+    background-image: url("../images/music2.jpg");
     /* opacity: 20%; */
 }
 h1 {
     font-size: 200px;
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    font-weight: 150px;
+    font-weight: bold;
 }
 #startbtn {
     font-family: 'Courier New', Courier, monospace;
