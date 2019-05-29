@@ -1,19 +1,18 @@
 $(document).ready(function() {
 
-// Boy bands questions
- var secs; 
- var correct = 0;
- var wrong = 0;
- var interval;
+// event
+$("#startbtn").on('click', game.start);
+});
 
-// 5 questions, 15 seconds (15000) // timer not working ATM
-function clock() {
-    clearInterval(interval);
-    interval = setInterval(decrement, 15000);
-    $(".secs").show()
-    
-}
-// Questions object, answers array 
+// Game variables 
+var game = {
+    gameQs: "",
+    correct: 0,
+   wrong: 0, 
+   score: 0
+};
+
+// Questions object, answers & answers array 
 questions = [
     { q: "What band sings 'I Want it That Way'?",
     a: "Backstreet Boys",
@@ -37,8 +36,35 @@ questions = [
 },
 ];
 console.log(questions);
-});
 
+
+
+// 5 questions, 15 seconds (15000) // timer functions
+var seconds = 15;
+var increment;
+function Timer() {
+    increment = setInterval(decrement, 1500);
+ };
+
+ function decrement() {
+     seconds --;
+     $("#time-left").html("Time left: " + seconds + "seconds");
+     if (seconds === 0) {
+         timerStop();
+         questions.length = 0;
+     }
+ };
+
+ function viewTime() {
+     $("#time-left").html("seconds left");
+ };
+// ask user questions
+ function askQs() {
+     $("#timer").html(seconds + "seconds left to answer");
+     $("#askqs").html(this.questions);
+ }
+
+// Boy bands questions
 // Q: What band sings 'I Want it That Way'?
  // A: Backstreet Boys 
  // Potential answers: 98 degrees, Boys II Men, New Kids on the Block 

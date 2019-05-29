@@ -3,11 +3,18 @@ body {
     /* opacity: 20%; */
 }
 h1 {
-    font-size: 200px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+    font-size: 350px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
     font-weight: bold;
+    text-align: center;
 }
 #startbtn {
     font-family: 'Courier New', Courier, monospace;
+}
+.container {
+    background-color: rgb(233, 47, 47);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
