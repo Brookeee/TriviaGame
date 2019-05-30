@@ -1,12 +1,11 @@
 $(document).ready(function() {
 
-// event
-$("#startbtn").on('click', game.start);
+// Start button event listener
+$("#startbtn").click(function() {  
 });
 
-// Game variables 
+// Trivia global variables
 var game = {
-    gameQs: "",
     correct: 0,
    wrong: 0, 
    score: 0
@@ -35,13 +34,11 @@ questions = [
     options: "Jackson 5, Hanson, The Beatles",
 },
 ];
-console.log(questions);
+// console.log(questions);
 
-
-
-// 5 questions, 15 seconds (15000) // timer functions
+// 5 questions, 15 seconds for each question. Timer functions to display to HTML
 var seconds = 15;
-var increment;
+// var increment;
 function Timer() {
     increment = setInterval(decrement, 1500);
  };
@@ -50,19 +47,27 @@ function Timer() {
      seconds --;
      $("#time-left").html("Time left: " + seconds + "seconds");
      if (seconds === 0) {
-         timerStop();
-         questions.length = 0;
-     }
- };
+        // //  timerStop();
+        //  questions.length = 0;
+//      }
+//  };
+//  };
 
- function viewTime() {
-     $("#time-left").html("seconds left");
- };
-// ask user questions
- function askQs() {
-     $("#timer").html(seconds + "seconds left to answer");
-     $("#askqs").html(this.questions);
- }
+// Create function to display questions to HTML with multiple choice answers
+    // function displayQ() {
+    //     for (var i = 0; i < questions.length; i++) {
+            // $("#askqs").html()
+
+    // };
+    
+// reset game, display end game results 
+// function reset();
+
+
+
+
+
+
 
 // Boy bands questions
 // Q: What band sings 'I Want it That Way'?
